@@ -226,6 +226,7 @@ __weak static UIViewController *_defaultViewController;
         else
         {
             [currentView.viewController.view addSubview:currentView];
+            currentView.layer.zPosition = 1000;
             if ([TSMessage iOS7StyleEnabled] || isViewIsUnderStatusBar) {
                 addStatusBarHeightToVerticalOffset();
             }
